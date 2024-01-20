@@ -1,0 +1,44 @@
+<mvc:View
+    controllerName="project2data.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table items="{TableModel>/Employees}">
+                <columns>
+                    <Column>
+                        <Text text="userId" />
+                    </Column>
+                    <Column>
+                        <Text text="jobTitleName" />
+                    </Column>
+                    <Column>
+                        <Text text="firstName" />
+                    </Column>
+                    <Column>
+                        <Text text="lastName" />
+                    </Column>
+                    <Column>
+                        <Text text="region" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                        <Text text="{TableModel>userId}"></Text>
+                        <Text text="{TableModel>jobTitleName}"></Text>
+                        <Text text="{TableModel>firstName}"></Text>
+                        <Text text="{TableModel>lastName}"></Text>
+                        <Text text="{TableModel>region}"></Text>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
